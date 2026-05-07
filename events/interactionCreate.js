@@ -28,10 +28,6 @@ module.exports = {
         };
 
         if (interaction.isButton()) {
-            if (interaction.user.id === interaction.customId) { // ユーザーIDを使うため特例
-                return await interaction.message.delete();
-            }
-
             try {
                 const button = require(`../interactions/buttons/${interaction.customId}.js`);
                 await button.execute(interaction, client);
