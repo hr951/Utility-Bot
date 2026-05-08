@@ -7,7 +7,7 @@ module.exports = {
         if (interaction.isChatInputCommand()) {
             const command = interaction.client.commands.get(interaction.commandName);
             if (!command) {
-                console.error(`${interaction.commandName} が見つかりません。`);
+                custom.error(`${interaction.commandName} が見つかりません。`, "");
                 return;
             }
             try {
@@ -15,13 +15,13 @@ module.exports = {
             } catch (error) {
                 try {
                     await interaction.reply({ content: 'Error', flags: [MessageFlags.Ephemeral] });
-                    console.error(error);
+                    custom.error(error.message, "");
                 } catch (error) {
                     try {
                         await interaction.editReply({ content: 'Error', flags: [MessageFlags.Ephemeral] });
-                        console.error(error);
+                        custom.error(error.message, "");
                     } catch (error) {
-                        console.error(error);
+                        custom.error(error.message, "");
                     }
                 }
             }
@@ -32,7 +32,7 @@ module.exports = {
                 const button = require(`../interactions/buttons/${interaction.customId}.js`);
                 await button.execute(interaction, client);
             } catch (error) {
-                console.error(`${interaction.customId} が見つかりません\n` + error);
+                custom.error(`${interaction.customId} が見つかりません\n${error.message}`, "");
                 interaction.reply({ content: "Error", flags: [MessageFlags.Ephemeral] });
                 return;
             }
@@ -43,7 +43,7 @@ module.exports = {
                 const modal = require(`../interactions/modals/${interaction.customId}.js`);
                 await modal.execute(interaction, client);
             } catch (error) {
-                console.error(`${interaction.customId} が見つかりません\n` + error);
+                custom.error(`${interaction.customId} が見つかりません\n${error.message}`, "");
                 interaction.reply({ content: "Error", flags: [MessageFlags.Ephemeral] });
                 return;
             }
@@ -54,7 +54,7 @@ module.exports = {
                 const selectmenu = require(`../interactions/selectmenus/${interaction.customId}.js`);
                 await selectmenu.execute(interaction, client);
             } catch (error) {
-                console.error(`${interaction.customId} が見つかりません\n` + error);
+                custom.error(`${interaction.customId} が見つかりません\n${error.message}`, "");
                 interaction.reply({ content: "Error", flags: [MessageFlags.Ephemeral] });
                 return;
             }

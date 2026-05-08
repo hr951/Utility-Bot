@@ -5,6 +5,6 @@ module.exports = {
     async execute(reaction, user, client) {
         const react_message = reaction.message;
         react_message.guild.members.resolve(user);
-        console.log(`${reaction.message.guild} で ${user.displayName} が ${reaction.emoji.name} をリアクションしました`);
+        custom.log(`${reaction.message.guild} で ${user.displayName} が ${reaction.emoji.name} をリアクションしました`);
     },
 };

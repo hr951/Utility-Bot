@@ -16,6 +16,6 @@ module.exports = {
             });
         }, 5_000);
 
-        console.log(`Logged in as ${client.user.tag}`);
+        custom.log(`Logged in as ${client.user.tag}`);
     },
 };

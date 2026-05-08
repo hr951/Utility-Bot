@@ -39,7 +39,7 @@ for (const file of commandFiles) {
     if ('data' in command && 'execute' in command) {
         client.commands.set(command.data.name, command);
     } else {
-        console.log(`${filePath} に必要な "data" か "execute" がありません。`);
+        custom.log(`${filePath} に必要な "data" か "execute" がありません。`);
     }
 }
 
