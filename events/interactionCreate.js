@@ -1,5 +1,4 @@
 const { MessageFlags } = require("discord.js");
-require("dotenv").config();
 
 module.exports = {
     name: 'interactionCreate',

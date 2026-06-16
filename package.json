@@ -3,5 +3,21 @@
     "discord.js": "^14.26.4",
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
-  }
+  },
+  "name": "!utility-bot",
+  "version": "1.0.0",
+  "description": "> [!Note]\r > ESLint Setup\r > ```\r > npm init -y\r > npm install --save-dev eslint\r > npx eslint --init\r > ```",
+  "main": "index.js",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.5.0",
+    "globals": "^17.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

@@ -1,47 +1,44 @@
 const { SlashCommandBuilder } = require("discord.js");
 require('dotenv').config();
+require('./utils/createLogs');
 
 const token = process.env.DISCORD_BOT_TOKEN;
-const clientId = "clientId";
-const guildId = "guildId";
+const clientId = "1421462676458176532";
+const guildId = "1040937611390353408";
 
 // ----- グローバルコマンドここから-----
-const ping = new SlashCommandBuilder()
-	.setName('ping')
-	.setDescription('Pingを取得します');
+const genshin = new SlashCommandBuilder()
+	.setName('genshin')
+	.setDescription('原神に関する機能です');
 
-const top = new SlashCommandBuilder()
-	.setName('top')
-	.setDescription('チャンネルの最初のメッセージを取得します');
+const hive = new SlashCommandBuilder()
+	.setName('hive')
+	.setDescription('Hiveに関する機能です');
 
-const example = new SlashCommandBuilder()
-	.setName('example')
-	.setDescription('description')
-	.addSubcommand(subcommand =>
-		subcommand
-			.setName('sub1')
-			.setDescription('sub1 description')
-			.addUserOption(option =>
-				option
-					.setName('user')
-					.setDescription('user description')
-					.setRequired(false)
-			)
-	)
-	.addSubcommand(subcommand =>
-		subcommand
-			.setName('sub2')
-			.setDescription('sub2 description')
-	);
+const note = new SlashCommandBuilder()
+	.setName('note')
+	.setDescription('メモに関する機能です');
 
-const commands = [ping, top, example];
+const nte = new SlashCommandBuilder()
+	.setName('nte')
+	.setDescription('NTEに関する機能です');
+
+const wuwa = new SlashCommandBuilder()
+	.setName('wuwa')
+	.setDescription('鳴潮に関する機能です');
+
+const zzz = new SlashCommandBuilder()
+	.setName('zzz')
+	.setDescription('ZZZに関する機能です');
+
+const commands = [genshin, hive, note, nte, wuwa, zzz];
 
 // ----- ギルド専用コマンドここから-----
 const example = new SlashCommandBuilder()
 	.setName('example')
 	.setDescription('勢力ごとのメンバーを表示します');
 
-const commands_guild = [example];
+const commands_guild = [];
 
 // 登録用関数
 const { REST, Routes } = require("discord.js")

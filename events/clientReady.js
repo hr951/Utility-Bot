@@ -1,5 +1,4 @@
 const { ActivityType, PresenceUpdateStatus } = require("discord.js");
-require("dotenv").config();
 
 module.exports = {
     name: 'clientReady',
@@ -8,7 +7,7 @@ module.exports = {
             client.user.setPresence({
                 activities: [
                     {
-                        name: `String`,
+                        name: `えいちあーるをお助け中`,
                         type: ActivityType.Playing
                     }
                 ],
