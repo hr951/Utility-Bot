@@ -4,7 +4,7 @@ const path = require('node:path');
 require("dotenv").config();
 require('./utils/createLogs.js');
 
-require("./server.js");
+// require("./server.js");
 
 const client = new Client({
     intents: [
