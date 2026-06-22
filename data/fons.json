@@ -1,0 +1,30 @@
+{
+    "1week": {
+        "daily": {
+            "fons": "14",
+            "complete": false
+        },
+        "stamina": {
+            "fons": "70",
+            "complete": false
+        },
+        "coffee": {
+            "fons": "38.5",
+            "complete": false
+        },
+        "send": {
+            "fons": "1.8",
+            "complete": false
+        },
+        "mamon": {
+            "fons": "5.6",
+            "complete": false
+        }
+    },
+    "2week": {
+        "steal": {
+            "fons": "100",
+            "complete": false
+        }
+    }
+}
