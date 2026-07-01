@@ -22,6 +22,10 @@ module.exports = {
 				{
 					label: "メモ",
 					value: "note",
+				},
+				{
+					label: "MsgCmdリスト",
+					value: "msgCmd",
 				}
 			);
 

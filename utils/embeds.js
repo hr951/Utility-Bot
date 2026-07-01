@@ -51,8 +51,18 @@ function image_url_embed(title, url, image) {
     return embed;
 };
 
+function image_embed(image) {
+    const embed = new EmbedBuilder()
+        .setColor(color)
+        .setImage(image)
+        .setTimestamp();
+
+    return embed;
+};
+
 module.exports = {
     basic_embed,
     fields_embed,
-    image_url_embed
+    image_url_embed,
+    image_embed
 };

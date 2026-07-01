@@ -1,0 +1,20 @@
+{
+    "Hive Tracker": [
+        "hive"
+    ],
+    "MinaServer": [
+        "debug",
+        "reset",
+        "point_reset",
+        "setting <options>",
+        "edit <options>",
+        {
+            "options": [
+                "configServer",
+                "configBlackWords",
+                "configProfile",
+                "configAcceptRules"
+            ]
+        }
+    ]
+}
