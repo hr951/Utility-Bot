@@ -13,10 +13,11 @@ Thumbs.db
 
 # 環境設定関連
 .env
-package-lock.json
 *.pem
 
 # 検証用ファイル
 test_*
 *.bat
 dev_data/
+node-*
+output/
