@@ -14,6 +14,10 @@ module.exports = {
 				{
 					label: "勝率計算",
 					value: "winRate",
+				},
+				{
+					label: "スキン取得",
+					value: "getSkin"
 				}
 			);
 

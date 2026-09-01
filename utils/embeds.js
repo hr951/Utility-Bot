@@ -60,9 +60,21 @@ function image_embed(image) {
     return embed;
 };
 
+function image_embed_with_title(title, image, thumbnail) {
+    const embed = new EmbedBuilder()
+        .setTitle(title)
+        .setImage(image)
+        .setThumbnail(thumbnail)
+        .setColor(color)
+        .setTimestamp();
+
+    return embed;
+}
+
 module.exports = {
     basic_embed,
     fields_embed,
     image_url_embed,
-    image_embed
+    image_embed,
+    image_embed_with_title
 };

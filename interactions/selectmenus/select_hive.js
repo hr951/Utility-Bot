@@ -1,6 +1,7 @@
 const { ModalBuilder, TextInputBuilder, ActionRowBuilder } = require('discord.js');
 const hive_modules = [
-    "winRate"
+    "winRate",
+    "getSkin"
 ];
 
 module.exports = {
@@ -33,6 +34,19 @@ module.exports = {
             const ActionRow_2 = new ActionRowBuilder().setComponents(TextInput_2);
             const ActionRow_3 = new ActionRowBuilder().setComponents(TextInput_3);
             modal.setComponents(ActionRow, ActionRow_2, ActionRow_3);
+            return interaction.showModal(modal);
+        } else if (value === hive_modules[1]) {
+            const modal = new ModalBuilder()
+                .setTitle("スキン取得")
+                .setCustomId("getSkin_submit");
+            const TextInput_1 = new TextInputBuilder()
+                .setLabel("MinecraftのIDを入力してください")
+                .setCustomId("mcid")
+                .setStyle("Short")
+                .setMaxLength(4000)
+                .setRequired(true);
+            const ActionRow = new ActionRowBuilder().setComponents(TextInput_1);
+            modal.setComponents(ActionRow);
             return interaction.showModal(modal);
         }
 
